@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+} */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Barlow Semi Condensed";
+    font-size: 10px;
+}
+
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main{
+    display: grid;
+    grid-template-areas: 
+    "dani dani jon kir"
+    "jean pat pat kir";
+    width: 900px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 30px;
+    padding: 0 20px;
+    margin: 20px auto;
+}
+
+footer{
+    margin-top: auto;
+    padding: 20px;
+    background: #1f1f1f;
+    text-align: center;
+    color: #ffffff95;
+}
+
+footer a{
+    text-decoration: none;
+    color: steelblue;
+}
+
+.daniel{
+    grid-area: dani;
+    background: #733fc8 url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position:  right 40px top 0;
+    color: #fff;
+}
+.kira{
+    grid-area: kir;
+    background: #fff;
+}
+.jeanette{
+    grid-area: jean;
+    background: #fff;
+}
+.patrick{
+    grid-area: pat;
+    background: #191f2d;
+    color: #fff;
+}
+.jonathan{
+    grid-area: jon;
+    background: #49556b;
+    color: #fff;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+}
+.this{
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.292);
+}
+.pfp{
+    border-radius: 50%;
+    border:1px solid hsl(260, 100%, 95%);
+    margin-right: 6px;
+    width: 40px;
+}
+.cer{
+    font-weight: 500;
+    opacity: 50%;
+}
+.name{
+    font-weight: 600;
+    opacity: 80%;
+}
+.txt{
+    opacity: 60%;
+    font-weight: 500;
+}
+h3{
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 90%;
+}
+
+@media(max-width: 750px){
+    .main{
+        grid-template-areas: 
+        "dani dani jon"
+        "jean pat pat"
+        "kir kir kir";
+        width: 600px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .contain{
+        align-items: start;
+        height: fit-content;
+    }
+}
+
+@media(max-width: 600px){
+    .main{
+        grid-template-areas: 
+        "dani"
+        "jon"
+        "jean"
+        "pat"
+        "kir";
+        grid-template-columns: 1fr;
+        width: 300px;
+    }
+    .contain{
+        align-items: start;
+    }
+    
+}
